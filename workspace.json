@@ -1,6 +1,7 @@
 {
   "version": 2,
   "projects": {
-    "stitches-operator": "packages/stitches/operator"
+    "stitches-operator": "packages/stitches/operator",
+    "stitches-primitives": "packages/stitches/primitives"
   }
 }

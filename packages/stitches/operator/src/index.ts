@@ -1,1 +1,2 @@
-export * from './stitches.config';
+export * from './config/stitches.config';
+export * from './interfaces';
