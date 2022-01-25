@@ -1,1 +1,1 @@
-export * from './lib/stitches-operator';
+export * from './stitches.config';
