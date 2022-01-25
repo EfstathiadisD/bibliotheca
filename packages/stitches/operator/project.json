@@ -1,0 +1,43 @@
+{
+  "root": "packages/stitches/operator",
+  "sourceRoot": "packages/stitches/operator/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:rollup",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/stitches/operator",
+        "tsConfig": "packages/stitches/operator/tsconfig.lib.json",
+        "project": "packages/stitches/operator/package.json",
+        "entryFile": "packages/stitches/operator/src/index.ts",
+        "external": ["react/jsx-runtime"],
+        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+        "compiler": "babel",
+        "assets": [
+          {
+            "glob": "packages/stitches/operator/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/stitches/operator/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/packages/stitches/operator"],
+      "options": {
+        "jestConfig": "packages/stitches/operator/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

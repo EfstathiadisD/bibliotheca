@@ -14,7 +14,9 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@stitches/operator": ["packages/stitches/operator/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
